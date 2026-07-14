@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: #0b0f0e;
+  color: #e6f2ee;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+.font-mono-key {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+::selection {
+  background: #34d399;
+  color: #05130f;
+}
+
+/* Minimal, low-key scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #1f2b27; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes pk-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+.pk-pulse {
+  animation: pk-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pk-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pk-fade-in {
+  animation: pk-fade-in 0.18s ease-out;
+}
+
